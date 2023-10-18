@@ -7,33 +7,33 @@ class Program1 extends ConsoleProgram {
   
   public void run() {
 
-    //Declares the password variable. Password is "password123"
-    String password = "password123";
-    //The number of tries the user is given is 5
-    int tries = 5;
+    //Объявляет переменную пароля. Пароль: «пароль123».
+    String пароль = "password123";
+    //Количество попыток, предоставленных пользователю, равно 5
+    int пытается = 5;
     
-    //Takes in the password guess of the user
-    String passwordGuess = readLine("Enter the password: ");
+    //Принимает пароль пользователя
+    String парольУгадай = readLine("Введите пароль:");
 
-    //Will continue running until either the user runs out of tries or guesses the password
-    while(tries > 0 || !(passwordGuess.equals(password))){
+    //Продолжим работу до тех пор, пока у пользователя не закончатся попытки или пока он не угадает пароль
+    while(пытается > 0 || !(парольУгадай.equals(пароль))){
 
-      //If the user guesses the password correct it will print "Correct!" and break. 
-      if(passwordGuess.equals(password)){
-        System.out.println("Correct!");
+      //Если пользователь правильно угадает пароль, он напечатает «Правильно!» и сломать.
+      if(парольУгадай.equals(пароль)){
+        System.out.println("Правильный!");
       }
-      //If they don't get it correct this code will run
+      //Если они не поймут правильно, этот код будет запущен
       else {
-        //Subtracts the number of tries the user has left by 1
-        tries--; 
-        //if the tries is not equal to 0 it will give them another try
-        if(tries != 0){
-          System.out.println("Incorrect. You have " + tries + " tries left");
-          passwordGuess = readLine("Enter the password: ");
+        //Вычитает количество попыток, оставшихся у пользователя, на 1
+        пытается--; 
+        //если число попыток не равно 0, будет предложена еще одна попытка
+        if(пытается != 0){
+          System.out.println("Неверно. У вас есть " + пытается + " пытается уйти влево");
+          парольУгадай = readLine("Введите пароль:");
         }
-        //if the tries is equal to 0 then it will break
+        //если число попыток равно 0, то оно сломается
         else{
-          System.out.println("Incorrect, you have used up too many tries");
+          System.out.println("Неверно, вы потратили слишком много попыток.");
         }
       }
     }
